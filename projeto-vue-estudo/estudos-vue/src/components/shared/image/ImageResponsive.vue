@@ -1,11 +1,14 @@
 <template>
-    <img class="imagem-responsiva" :src="url" :alt="titulo" /> 
+  <img class="imagem-responsiva" :src="url" :alt="titulo" />
 </template>
 
 <script>
 //exports
 export default {
-  props: ["url", "titulo"],
+  props: {
+    url: { type: String, required: true },
+    titulo: { type: String, required: true },
+  },
 };
 </script>
 
@@ -14,3 +17,9 @@ export default {
   width: 100%;
 }
 </style>
+ props: {
+    rotas: {
+      type: Array,
+      required: true,
+    },
+  },
